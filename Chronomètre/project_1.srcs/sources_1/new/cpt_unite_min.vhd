@@ -41,22 +41,30 @@ entity cpt_unite_min is
 end cpt_unite_min;
 
 architecture Behavioral of cpt_unite_min is
-signal cpt_int : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-
+signal cpt_int : STD_LOGIC_VECTOR (5 downto 0) := "000000";
+signal resu : STD_LOGIC_VECTOR(3 downto 0) :="0000";
 begin
+
 process(clk)
 begin
 
 if(nreset='1') then
     cpt_int <= (others => '0');
+    resu <= (others =>'0');
 elsif(clk'event and clk='1')  then 
-    if(cpt_int = "1001") then
+ if(cpt_int ="111100") then
+    if(resu = "1001") then
+        resu <= (others => '0');
         cpt_int <= (others => '0');
     else
-    cpt_int <= cpt_int + 1;
+        cpt_int <= (others => '0');
+        resu <= resu +1;
     end if;
+  else
+    cpt_int <= cpt_int + 1;
+  end if;
 end if;
 end process;
-unite <= cpt_int; 
+unite <= resu; 
 
 end Behavioral;

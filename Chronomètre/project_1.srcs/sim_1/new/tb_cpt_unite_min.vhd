@@ -61,8 +61,6 @@ end process;
 process
 begin
 nreset <='0';
-wait for 2000ns;
-nreset<='1';
 wait;
 end process;
 

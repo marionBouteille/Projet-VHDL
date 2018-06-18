@@ -1,6 +1,6 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: D:/Programmes/Vivado/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 1e787ed670ca443b8e0a2d3f50f7e2d1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_cpt_0_3_behav xil_defaultlib.tb_cpt_0_3 -log elaborate.log 
+Running: D:/Programmes/Vivado/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 1e787ed670ca443b8e0a2d3f50f7e2d1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_cpt_dizaine_min_behav xil_defaultlib.tb_cpt_dizaine_min -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -13,6 +13,6 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.cpt_0_3 [cpt_0_3_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_cpt_0_3
-Built simulation snapshot tb_cpt_0_3_behav
+Compiling architecture behavioral of entity xil_defaultlib.cpt_dizaine_min [cpt_dizaine_min_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_cpt_dizaine_min
+Built simulation snapshot tb_cpt_dizaine_min_behav

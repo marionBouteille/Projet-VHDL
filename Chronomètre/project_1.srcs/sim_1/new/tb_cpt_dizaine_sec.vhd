@@ -48,6 +48,7 @@ end component;
 signal clk,nreset : std_logic := '0';
 signal dizaine : STD_LOGIC_VECTOR (3 downto 0) := "0000";
 
+
 begin
 uut:cpt_dizaine_sec
 port map(clk =>clk, nreset=>nreset,dizaine=>dizaine);
@@ -63,7 +64,8 @@ begin
 nreset <='0';
 wait for 2000ns;
 nreset<='1';
-wait;
+wait for 20 ns;
+nreset <='0';
 end process;
 
 
