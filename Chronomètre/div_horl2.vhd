@@ -53,7 +53,7 @@ if(nreset='1') then
  cpt_int <= (others => '0');
 elsif(clk'event and clk='1') then
   --représente 1 seconde
- if(cpt_int =X"C350") then
+ if(cpt_int =X"6400") then
      if(etat='0') then
          s <= '1';
          etat <='1';

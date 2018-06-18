@@ -52,7 +52,7 @@ if(nreset='1') then
     cpt_int <= (others => '0');
     resu <= (others =>'0');
 elsif(clk'event and clk='1')  then 
- if(cpt_int ="1001011000") then
+ if(cpt_int ="1001010111") then
     if(resu = "0101") then
         resu <= (others => '0');
         cpt_int <= (others => '0');

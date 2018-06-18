@@ -127,7 +127,7 @@ i4 : cpt_dizaine_min
 port map(clk=>horl_sec, nreset=>reset, dizaine=>dizaine_min);
 
 i5 : cpt_0_3
-port map(clk=>clk, nreset=>reset, cpt=>cpt_int);
+port map(clk=>horl_ms, nreset=>reset, cpt=>cpt_int);
 
 i6 : multiplexeur
 port map(E0=>unite_sec, E1=>dizaine_sec, E2=>unite_min, E3=>dizaine_min, SEL0=>cpt_int, S=>multiplex);
