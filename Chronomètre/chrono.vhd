@@ -37,6 +37,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity chrono is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
+           stop : in STD_LOGIC;
            segment : out STD_LOGIC_VECTOR (6 downto 0);
            anode : out STD_LOGIC_VECTOR (3 downto 0));
 end chrono;
@@ -46,6 +47,7 @@ architecture Behavioral of chrono is
 component div_horl is
     Port ( clk : in STD_LOGIC;
            nreset : in STD_LOGIC;
+           stop : in STD_LOGIC;
            s : out STD_LOGIC);
 end component;
 
@@ -112,7 +114,7 @@ signal cpt_int: std_logic_vector(1 downto 0);
 
 begin
 i0 : div_horl
-port map(clk=>clk, nreset=>reset, s=>horl_sec);
+port map(clk=>clk, nreset=>reset,stop=>stop, s=>horl_sec);
 
 i1 : cpt_unite_sec
 port map(clk=>horl_sec, nreset=>reset, unite=>unite_sec);

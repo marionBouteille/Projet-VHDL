@@ -37,6 +37,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity div_horl is
     Port ( clk : in STD_LOGIC;
             nreset : in STD_LOGIC;
+            stop : in STD_LOGIC;
            s : out STD_LOGIC );
 end div_horl;
 
@@ -46,10 +47,12 @@ architecture Behavioral of div_horl is
     signal etat : STD_LOGIC := '0'; 
 
 begin
-process(clk, nreset)
+process(clk, nreset, stop)
 begin
+if(stop='1') then
+    cpt_int <= cpt_int; 
 --reset actif
-if(nreset='1') then
+elsif(nreset='1') then
      cpt_int <= (others => '0');
 elsif(clk'event and clk='1') then
       --représente 1 seconde
@@ -64,7 +67,7 @@ elsif(clk'event and clk='1') then
          cpt_int <= (others => '0');
      else
      cpt_int <= cpt_int + 1;
-      end if;   
+      end if;              
 end if; 
 end process;
 

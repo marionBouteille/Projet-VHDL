@@ -55,7 +55,7 @@ elsif(clk'event and clk='1')  then
         cpt_int <= (others => '0');
     else
     cpt_int <= cpt_int + 1;
-    end if;
+    end if;    
 end if;
 end process;
 unite <= cpt_int; 
